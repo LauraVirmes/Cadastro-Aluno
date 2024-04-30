@@ -39,6 +39,11 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         setTitle("Cadastro Aluno");
 
         jMenuArquivo.setText("Arquivo");
+        jMenuArquivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuArquivoActionPerformed(evt);
+            }
+        });
 
         jMenuItemNovoAluno.setText("Cadastro de Aluno");
         jMenuItemNovoAluno.addActionListener(new java.awt.event.ActionListener() {
@@ -59,6 +64,11 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         jMenuArquivo.add(jSeparator1);
 
         jMenuItemSair.setText("Sair");
+        jMenuItemSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSairActionPerformed(evt);
+            }
+        });
         jMenuArquivo.add(jMenuItemSair);
 
         jMenuBar1.add(jMenuArquivo);
@@ -83,12 +93,25 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemNovoAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemNovoAlunoActionPerformed
+        FrmCadastroAluno objeto = new FrmCadastroAluno();
+        this.dispose();
+        objeto.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemNovoAlunoActionPerformed
 
     private void jMenuItemGerenciarAlunosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGerenciarAlunosActionPerformed
-        // TODO add your handling code here:
+        FrmGerenciaAluno objeto = new FrmGerenciaAluno();
+        this.dispose();
+        objeto.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemGerenciarAlunosActionPerformed
+
+    private void jMenuArquivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuArquivoActionPerformed
+
+    }//GEN-LAST:event_jMenuArquivoActionPerformed
+
+    private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
+        System.exit(0);        
+    }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     /**
      * @param args the command line arguments

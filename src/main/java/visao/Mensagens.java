@@ -8,6 +8,9 @@ package visao;
  *
  * @author 1072410009
  */
-public class Mensagens {
-    
+public class Mensagens extends Exception {
+
+    Mensagens(String msg) {
+        super(msg);
+    }
 }
