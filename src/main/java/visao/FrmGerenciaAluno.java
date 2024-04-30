@@ -206,12 +206,24 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
     }//GEN-LAST:event_JTFNomeActionPerformed
 
     private void b_apagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_apagarActionPerformed
-        // TODO add your handling code here:
+        try {
+            int id = 0;
+            if (this.JTableAlunos.getSelectedRow() == -1) {
+                throw new Mensagens("Primeiro Selecione um Aluno para APAGAR");
+} else {
+id = Integer.parseInt(this.JTableAlunos.
+                        getValueAt(this.JTableAlunos.getSelectedRow(), 0).
+                        toString());
+            }
+// retorna 0 -> primeiro botão | 1 -> segundo botão | 2 -> terceiro botão
+            int respostaUsuario = JOptionPane.
+                    showConfirmDialog(null,
+                            "Tem certeza que deseja apagar este Aluno ?");
     }//GEN-LAST:event_b_apagarActionPerformed
 
     /**
-     * @param args the command line arguments
-     */
+         * @param args the command line arguments
+         */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
